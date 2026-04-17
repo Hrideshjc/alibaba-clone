@@ -13,17 +13,17 @@ const Navbar = () => {
 
   return (
     <nav className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between px-4 sm:px-6 lg:px-12 py-4 bg-white border-b border-gray-100 sticky top-0 z-50">
-      {/* Left: Logo and Nav Links */}
+      
       <div className="flex flex-col w-full gap-4 sm:flex-row sm:items-center sm:w-auto">
         <div className="flex items-center justify-between w-full sm:w-auto gap-4">
-          {/* Brand Logo */}
+          
           <div className="flex items-center cursor-pointer">
             <span className="text-[#FA6C48] text-2xl sm:text-3xl font-bold tracking-tight">
               Alibaba<span className="text-[#333] font-normal text-xl sm:text-2xl">.com</span>
             </span>
           </div>
 
-          {/* Mobile menu button */}
+          
           <button
             type="button"
             onClick={() => setMobileOpen((prev) => !prev)}
@@ -50,7 +50,7 @@ const Navbar = () => {
           <a href="#" className="block px-3 py-2 rounded-md text-gray-900 font-bold hover:bg-gray-50">Sign in</a>
         </div>
 
-        {/* Desktop Links Section */}
+        
         <div className="hidden md:flex flex-wrap items-center gap-8 text-[15px] text-gray-600 font-medium">
           <a href="#" className="hover:text-black transition-colors">Get Started</a>
           {navLinks.map((link) => (
@@ -69,7 +69,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Right: Sign In */}
+      
       <div className="hidden md:flex w-full sm:w-auto justify-center sm:justify-end">
         <button className="text-sm sm:text-[16px] font-bold text-gray-900 hover:text-[#FA6C48] transition-colors">
           sign in

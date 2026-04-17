@@ -1,5 +1,5 @@
-// src/components/sections/StepCard.jsx
-import { FiSearch } from 'react-icons/fi'; // Using React Icons
+
+import { FiSearch } from 'react-icons/fi';
 
 export const StepCard = ({ number, title, description, Icon }) => (
   <div className="w-full max-w-[320px] sm:max-w-none mx-auto sm:mx-0 flex flex-col items-center text-center p-6 bg-white rounded-xl border border-transparent hover:border-aliPrimary/20 hover:shadow-xl transition-all group">

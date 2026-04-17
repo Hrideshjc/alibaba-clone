@@ -16,7 +16,7 @@ const Footer = () => {
     <footer className="bg-[#F2F3F7] py-12 px-4 sm:px-6 md:px-8 text-center font-sans">
       <div className="max-w-7xl mx-auto space-y-4">
         
-        {/* Row 1: Brand Family */}
+        
         <div className="flex flex-wrap justify-center gap-2 text-xs sm:text-[13px] text-gray-500">
           {brandLinks.map((link, i) => (
             <React.Fragment key={link}>
@@ -26,7 +26,7 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Row 2: Search & Affiliate */}
+        
         <div className="flex flex-wrap justify-center gap-2 text-xs sm:text-[13px] text-gray-500">
           {searchLinks.map((link, i) => (
             <React.Fragment key={link}>
@@ -36,7 +36,7 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Row 3: Policies */}
+        
         <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3 text-xs sm:text-[13px] text-gray-500 pt-2">
           {policyLinks.map((link, i) => (
             <React.Fragment key={link}>
@@ -46,7 +46,7 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Row 4: Copyright & Licenses */}
+        
         <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3 text-[11px] sm:text-[12px] text-gray-400 pt-4">
           <div className="flex items-center gap-1">
             <img 
