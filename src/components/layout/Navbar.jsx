@@ -47,6 +47,7 @@ const Navbar = () => {
               {link.hasDropdown && <RiArrowDropDownLine className="text-xl text-gray-400" />}
             </button>
           ))}
+          <a href="#" className="block px-3 py-2 rounded-md text-gray-900 font-bold hover:bg-gray-50">Sign in</a>
         </div>
 
         {/* Desktop Links Section */}
@@ -69,7 +70,7 @@ const Navbar = () => {
       </div>
 
       {/* Right: Sign In */}
-      <div className="w-full sm:w-auto flex justify-center sm:justify-end">
+      <div className="hidden md:flex w-full sm:w-auto justify-center sm:justify-end">
         <button className="text-sm sm:text-[16px] font-bold text-gray-900 hover:text-[#FA6C48] transition-colors">
           sign in
         </button>
