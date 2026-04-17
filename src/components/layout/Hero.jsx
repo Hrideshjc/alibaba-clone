@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaPlay } from 'react-icons/fa';
+
+const VIDEO_SRC = 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4';
 
 const Hero = () => {
   return (
@@ -17,31 +18,19 @@ const Hero = () => {
         </div>
 
         
-        <div className="relative group cursor-pointer">
-          
-          <div className="rounded-xl overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
-            
-            <div className="aspect-video bg-gray-200 relative">
-              <img 
-                src="https://gw.alicdn.com/imgextra/i3/O1CN01f47edA1DULOeTMKGx_!!6000000000219-2-tps-1304-720.png" 
-                alt="Video thumbnail showing global logistics"
-                className="w-full h-full object-cover"
-              />
-              
-              
-              <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors" />
-
-              
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-16 h-16 md:w-20 md:h-20 bg-white rounded-full flex items-center justify-center shadow-xl transition-all duration-300 group-hover:scale-110">
-                  <FaPlay className="text-[#FA6C48] text-xl md:text-2xl ml-1" />
-                </div>
-              </div>
-            </div>
+        <div className="relative rounded-xl overflow-hidden shadow-2xl">
+          <div className="aspect-video bg-gray-200 relative">
+            <video
+              className="w-full h-full object-cover"
+              poster="https://gw.alicdn.com/imgextra/i3/O1CN01f47edA1DULOeTMKGx_!!6000000000219-2-tps-1304-720.png"
+              src={VIDEO_SRC}
+              controls
+              muted
+              loop
+              playsInline
+            />
+            <div className="absolute inset-0 bg-black/10 transition-colors" />
           </div>
-
-          
-          <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-white/10 rounded-full blur-2xl -z-10" />
         </div>
 
       </div>
