@@ -11,13 +11,9 @@ function App() {
     <div className="min-h-screen w-full overflow-x-hidden">
       <Navbar />
       <Hero />
-      <main className="w-full flex justify-center">
-        <div className="w-full max-w-[1200px]">
-          <Tab />
-          <BlogCard />
-          <Footer />
-        </div>
-      </main>
+      <Tab />
+      <BlogCard />
+      <Footer />
     </div>
   )
 }
