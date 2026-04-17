@@ -23,7 +23,7 @@ const BuyerPageTabs = () => {
 
   return (
     <div className="w-full font-sans">
-      <div className="flex flex-wrap bg-[#FA6C48] sticky top-0 z-20">
+      <div className="hidden md:flex flex-wrap bg-[#FA6C48] sticky top-0 z-20">
         {tabs.map((tab) => (
           <button
             key={tab.id}

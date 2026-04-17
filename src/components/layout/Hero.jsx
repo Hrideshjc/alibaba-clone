@@ -23,8 +23,8 @@ const Hero = () => {
             {/* If using a local video or YouTube embed */}
             <div className="aspect-video bg-gray-200 relative">
               <img 
-                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80" 
-                alt="Video Thumbnail"
+                src="https://gw.alicdn.com/imgextra/i3/O1CN01f47edA1DULOeTMKGx_!!6000000000219-2-tps-1304-720.png" 
+                alt="Video thumbnail showing global logistics"
                 className="w-full h-full object-cover"
               />
               
