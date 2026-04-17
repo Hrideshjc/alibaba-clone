@@ -128,33 +128,52 @@ const OrderConfidence = () => (
     </div>
   </div>
 );
-const HearFromBuyers = () => (
-  <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-    <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">Hear from our buyers</h2>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {[1, 2, 3].map((item) => (
-        <div key={item} className="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-          <div className="aspect-video bg-gray-200">
-            <img src={`https://picsum.photos/seed/${item + 20}/400/225`} alt="Buyer Thumbnail" className="w-full h-full object-cover" />
-          </div>
-          <div className="p-6">
-            <h3 className="font-bold text-lg mb-4">How Alibaba.com Enhanced Supplier Relations...</h3>
-            <div className="text-sm text-gray-400 flex justify-between">
-              <span>May 21, 2021</span>
-              <span>2 min read</span>
+const HearFromBuyers = () => {
+  const buyerCards = [
+    {
+      id: 1,
+      image: 'https://img.alicdn.com/imgextra/i3/O1CN01E7c2ut1XV4NDGv5fj_!!6000000002928-0-tps-600-380.jpg',
+      alt: 'Business buyers in discussion',
+    },
+    {
+      id: 2,
+      image: 'https://img.alicdn.com/imgextra/i1/O1CN014U4UNC1uYwtGaffke_!!6000000006050-0-tps-600-380.jpg',
+      alt: 'Buyer reviewing product samples',
+    },
+    {
+      id: 3,
+      image: 'https://img.alicdn.com/imgextra/i3/O1CN01j4TLzn1Iwo7q59LLo_!!6000000000958-0-tps-600-380.jpg',
+      alt: 'Handshake between buyers and supplier',
+    },
+  ];
+
+  return (
+    <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+      <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">Hear from our buyers</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {buyerCards.map((card) => (
+          <div key={card.id} className="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+            <div className="aspect-video bg-gray-200">
+              <img src={card.image} alt={card.alt} className="w-full h-full object-cover" />
+            </div>
+            <div className="p-6">
+              <h3 className="font-bold text-lg mb-4">How Alibaba.com Enhanced Supplier Relations...</h3>
+              <div className="text-sm text-gray-400 flex justify-between">
+                <span>May 21, 2021</span>
+                <span>2 min read</span>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
+      <div className="flex justify-center mt-12">
+        <button className="w-full md:w-auto px-12 py-3 border-2 border-[#FA6C48] text-[#FA6C48] font-bold rounded-full hover:bg-[#FA6C48] hover:text-white transition-all duration-300 transform active:scale-95">
+          See more
+        </button>
+      </div>
     </div>
-    <div className="flex justify-center mt-12">
-          <button className="w-full md:w-auto px-12 py-3 border-2 border-[#FA6C48] text-[#FA6C48] font-bold rounded-full hover:bg-[#FA6C48] hover:text-white transition-all duration-300 transform active:scale-95">
-            See more
-          </button>
-        </div>
-  </div>
-  
-);
+  );
+}
 
     
 

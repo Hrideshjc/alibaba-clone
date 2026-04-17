@@ -1,7 +1,8 @@
-import React from 'react';
-import { RiArrowDropDownLine } from "react-icons/ri";
+import React, { useState } from 'react';
+import { RiArrowDropDownLine, RiMore2Fill } from "react-icons/ri";
 
 const Navbar = () => {
+  const [mobileOpen, setMobileOpen] = useState(false);
   const navLinks = [
     { name: 'Why Alibaba.com', hasDropdown: true, isActive: true },
     { name: 'Trade Services', hasDropdown: true },
@@ -13,24 +14,38 @@ const Navbar = () => {
   return (
     <nav className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between px-4 sm:px-6 lg:px-12 py-4 bg-white border-b border-gray-100 sticky top-0 z-50">
       {/* Left: Logo and Nav Links */}
-      <div className="flex flex-col sm:flex-row sm:items-center gap-4 w-full sm:w-auto">
-        {/* Brand Logo */}
-        <div className="flex items-center cursor-pointer">
-          <span className="text-[#FA6C48] text-2xl sm:text-3xl font-bold tracking-tight">
-            Alibaba<span className="text-[#333] font-normal text-xl sm:text-2xl">.com</span>
-          </span>
+      <div className="flex flex-col w-full gap-4 sm:flex-row sm:items-center sm:w-auto">
+        <div className="flex items-center justify-between w-full sm:w-auto gap-4">
+          {/* Brand Logo */}
+          <div className="flex items-center cursor-pointer">
+            <span className="text-[#FA6C48] text-2xl sm:text-3xl font-bold tracking-tight">
+              Alibaba<span className="text-[#333] font-normal text-xl sm:text-2xl">.com</span>
+            </span>
+          </div>
+
+          {/* Mobile menu button */}
+          <button
+            type="button"
+            onClick={() => setMobileOpen((prev) => !prev)}
+            className="md:hidden p-2 rounded-full hover:bg-gray-100 transition-colors"
+            aria-label="Toggle navigation"
+          >
+            <RiMore2Fill className="text-2xl text-gray-700" />
+          </button>
         </div>
 
-        {/* Mobile Links Row */}
-        <div className="flex flex-wrap justify-center gap-2 text-xs text-gray-600 font-medium md:hidden">
-          <a href="#" className="hover:text-black transition-colors px-2 py-1 rounded-md">Get Started</a>
+        {/* Mobile dropdown menu */}
+        <div className={`${mobileOpen ? 'block' : 'hidden'} md:hidden bg-white border border-gray-100 rounded-xl p-3 space-y-2`}> 
+          <a href="#" className="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-50 hover:text-black">Get Started</a>
           {navLinks.map((link) => (
-            <div key={link.name} className="flex items-center gap-1 cursor-pointer py-1 px-2 rounded-md hover:text-black transition-colors">
+            <button
+              key={link.name}
+              type="button"
+              className="w-full text-left flex items-center justify-between px-3 py-2 rounded-md text-gray-700 hover:bg-gray-50 hover:text-black"
+            >
               <span>{link.name}</span>
-              {link.hasDropdown && (
-                <RiArrowDropDownLine className="text-lg text-gray-400" />
-              )}
-            </div>
+              {link.hasDropdown && <RiArrowDropDownLine className="text-xl text-gray-400" />}
+            </button>
           ))}
         </div>
 
